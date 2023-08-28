@@ -1,20 +1,20 @@
 package org.example;
 
 public class SportShop {
-    public static void main(String[] args) {
-        TShirtBuilder tShirtBuilder = new TShirtBuilder();
-        tShirtBuilder.setColor("Red");
-        tShirtBuilder.setManufacturer("Active sports");
-        tShirtBuilder.setPrice(15.99);
-        TShirt redTShirt = tShirtBuilder.build();
+    public static Order customerOrder(String tShirtColor, String capColor) {
+        TShirt redTShirt = TShirtBuilder.create()
+                .setColor(tShirtColor)
+                .setManufacturer("Active sports")
+                .setPrice(15.99)
+                .build();
 
-        CapBuilder capBuilder = new CapBuilder();
-        capBuilder.setColor("White");
-        capBuilder.setManufacturer("Smart caps");
-        capBuilder.setPrice(9.99);
-        Cap whiteCap = capBuilder.build();
+        Cap whiteCap = CapBuilder.create()
+                .setColor(capColor)
+                .setManufacturer("Smart caps")
+                .setPrice(9.99)
+                .build();
 
-        Order orderA = new Order(redTShirt, whiteCap);
-        orderA.printOrderDetails();
+        return new Order(redTShirt, whiteCap);
     }
 }
+

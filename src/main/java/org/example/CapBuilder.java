@@ -3,22 +3,26 @@ package org.example;
 public class CapBuilder implements ItemBuilder {
     private final Cap cap = new Cap();
 
-    @Override
-    public void setColor(String color) {
+    public CapBuilder setColor(String color) {
         cap.setColor(color);
+        return this;
     }
 
-    @Override
-    public void setManufacturer(String manufacturer) {
+    public CapBuilder setManufacturer(String manufacturer) {
         cap.setManufacturer(manufacturer);
+        return this;
     }
 
-    @Override
-    public void setPrice(double price) {
+    public CapBuilder setPrice(double price) {
         cap.setPrice(price);
+        return this;
     }
 
     public Cap build() {
         return cap;
+    }
+
+    public static CapBuilder create() {
+        return new CapBuilder();
     }
 }
