@@ -1,4 +1,7 @@
-package org.example;
+package org.exemple.shop.items;
+
+import org.exemple.shop.myInterface.ItemBuilder;
+
 public class TShirtBuilder implements ItemBuilder {
     private final TShirt tShirt = new TShirt();
 

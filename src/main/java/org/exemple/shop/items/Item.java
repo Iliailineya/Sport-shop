@@ -1,12 +1,11 @@
-package org.example;
+package org.exemple.shop.items;
 
-public class Item {
+import org.exemple.shop.myInterface.Product;
+
+public class Item implements Product {
     private String color;
     private String manufacturer;
     private double price;
-
-    public Item() {
-    }
 
     public String getColor() {
         return color;

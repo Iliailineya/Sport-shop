@@ -1,4 +1,6 @@
-package org.example;
+package org.exemple.shop.items;
+
+import org.exemple.shop.myInterface.ItemBuilder;
 
 public class CapBuilder implements ItemBuilder {
     private final Cap cap = new Cap();

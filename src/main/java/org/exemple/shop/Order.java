@@ -1,10 +1,12 @@
-package org.example;
+package org.exemple.shop;
+
+import org.exemple.shop.myInterface.Product;
 
 public class Order {
-    private final TShirt tShirt;
-    private final Cap cap;
+    private final Product tShirt;
+    private final Product cap;
 
-    public Order(TShirt tShirt, Cap cap) {
+    public Order(Product tShirt, Product cap) {
         this.tShirt = tShirt;
         this.cap = cap;
     }
